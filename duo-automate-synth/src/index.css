@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 6% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 6% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 6% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 220 100% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 260 85% 65%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 6% 15%;
+    --muted-foreground: 220 10% 70%;
+
+    --accent: 260 85% 65%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 6% 16%;
+    --input: 220 6% 16%;
+    --ring: 260 85% 65%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 6% 7%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 260 85% 65%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 220 6% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 6% 14%;
+    --sidebar-ring: 260 85% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border selection:bg-duopurple-600/30 selection:text-white;
+  }
+  
+  html {
+    @apply scroll-smooth;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+    @apply bg-duodark-500 text-foreground antialiased overflow-x-hidden;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+
+  button, a {
+    @apply transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.1)];
+  }
+  
+  .glass-darker {
+    @apply bg-black/20 backdrop-blur-lg border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.15)];
+  }
+  
+  .glass-card {
+    @apply bg-white/[0.07] backdrop-blur-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.1)];
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-gradient-blue {
+    @apply bg-gradient-duoblue bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-purple {
+    @apply bg-gradient-duopurple bg-clip-text text-transparent;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-duo bg-clip-text text-transparent;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+}
