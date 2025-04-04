@@ -47,3 +47,14 @@
 ## 📦 Installation
 
 ```bash
+git clone https://github.com/Ch-Kumar-Kartik/Duo-Mate.git
+cd duomate
+#install backend requirements
+cd backend
+npm install
+cd src
+node server.js  #server is up & db connected
+# connecting to the frontend
+cd .. && cd ..
+cd duomate-ai-synth
+npm install
